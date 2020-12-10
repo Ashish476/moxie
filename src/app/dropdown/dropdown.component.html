@@ -1,0 +1,130 @@
+<div class="card m-3">
+    <h5 class="card-header">MoxieDB</h5>
+    <div class="card-body">
+        <form [formGroup]="selectForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Role</label>
+                    <select formControlName="role" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Department</label>
+                    <select formControlName="department" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Frequency</label>
+                    <select formControlName="frequency" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>GracePeriod</label>
+                    <select formControlName="gracePeriod" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group col">
+                    <label>Requirement Type</label>
+                    <select formControlName="requirementType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+            </div>
+                <div class="form-row">
+                <div class="form-group formControlName col">
+                    <label for="file">Working Version</label>
+                    <input 
+                        formControlName="file"
+                        id="file" 
+                        type="file" 
+                        class="form-control"
+                        (change)="onFileChange($event)">
+                     
+                </div>
+                <div class="col">
+                <div class="form-group formControlName col">
+                    <label for="file">Final Version</label>
+                    <input 
+                        formControlName="file"
+                        id="file" 
+                        type="file" 
+                        class="form-control"
+                        (change)="onFileChange($event)">
+                     
+                </div>
+                <div class="form-group col">
+                    <label>status</label>
+                    <select formControlName="status" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>supervisor</label>
+                    <select formControlName="supervisor" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+                <div class="form-group col float-right">
+                    <button class="btn btn-primary mr-1">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+
